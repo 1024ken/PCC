@@ -4,7 +4,7 @@
 
 header {
   width: 100%;
-  height: 6.25rem;
+  height: 5.8rem;
   color: #666;    
   background-color: #F0FFF0;
 }
@@ -34,7 +34,6 @@ header {
   
   header ul a:hover {
     display: block;
-    padding: 20px;
     text-decoration: none;
     color: #fff;
     background-color: #F0FFF0;
@@ -42,7 +41,6 @@ header {
 
   header ul p:hover {
     display: block;
-    padding: 20px;
     text-decoration: none;
     color: #fff;
     background-color: #F0FFF0;
@@ -59,7 +57,7 @@ header {
     clear: both;
   }
   
-  .main-image {
+  .main_image {
     padding: 33rem 0 33rem 0;
     background-size: cover;
     background-image: url(main.jpg);
@@ -80,7 +78,7 @@ header {
     }
   }
 
-  .main-image:before {
+  .main_image:before {
     content: '';
     background: inherit;/*.bgImageで設定した背景画像を継承する*/
     -webkit-filter: blur(3px);
@@ -97,7 +95,7 @@ header {
     z-index: -1;/*重なり順序を一番下にしておく*/
   }
   
-  .family-images {
+  .family_images {
     font-size: 1.6em;
     padding-top: 1rem;
     color: #666;
@@ -157,7 +155,7 @@ header {
     }
   }
 
-  .page-top-btn {
+  .page_top_btn {
     position: fixed;
     right: 30px;
     bottom: 30px;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ActionCableSample</title>
+    <title>PCC</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,19 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <header>
+    <ul>
+      <li><%= link_to "PCC", root_path %></li>
+      <li><%= link_to "Contact", new_contact_path %></li>
+      <li><%= link_to "Message", chat_rooms_path %></li>
+    </ul>
+  </header>
+
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <p>© 2018 W.K</p>
+  </footer>
 </html>
