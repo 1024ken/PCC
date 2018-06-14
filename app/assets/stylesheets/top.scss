@@ -5,7 +5,7 @@
 header {
   width: 100%;
   height: 5.8rem;
-  color: #666;    
+  color: #158b2b;    
   background-color: #F0FFF0;
 }
   
@@ -27,7 +27,7 @@ header {
       display: block;
       padding: 32px 20px 20px 20px;
       font-size: 2em; 
-      color: #666;
+      color: #158b2b;
       text-decoration: none;
     }
   }
@@ -60,18 +60,18 @@ header {
   .main_image {
     padding: 33rem 0 33rem 0;
     background-size: cover;
-    background-image: url(main.jpg);
+    background-image: url(main_image.jpg);
     background-attachment: fixed;
     position: relative;
     z-index: 0;
-    overflow: hidden;/*ブラー効果でボヤけた部分を非表示*/
+    overflow: hidden;
   
     .description {
       font-size: 1.6em;
-      color: #fff;
+      color: #158b2b;
 
       p {
-        color: #fff;
+        color: #158b2b;
         font-size: 0.8em;
         font-family: serif;
       }
@@ -80,26 +80,27 @@ header {
 
   .main_image:before {
     content: '';
-    background: inherit;/*.bgImageで設定した背景画像を継承する*/
+    background: inherit;
     -webkit-filter: blur(3px);
     -moz-filter: blur(3px);
     -o-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
     position: absolute;
-    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
     top: -5px;
     left: -5px;
     right: -5px;
     bottom: -5px;
-    z-index: -1;/*重なり順序を一番下にしておく*/
+    z-index: -1;
   }
   
   .family_images {
-    font-size: 1.6em;
+    font-size: 1.1em;
     padding-top: 1rem;
-    color: #666;
-    background-color: #EEFFFF;
+    color: #158b2b;
+    background: -moz-linear-gradient(to bottom,#EEFFFF,#3399FF 90%,#0000CC); 
+    background: -webkit-linear-gradient(to bottom,#EEFFFF,#3399FF 90%,#0000CC); 
+    background: linear-gradient(to bottom,#EEFFFF,#3399FF 90%,#0000CC); 
 
     .seasons {
       width: 100%;
@@ -191,7 +192,7 @@ header {
     box-shadow: 0px -8px 3px -3px #DDDDDD;
 
     p {
-      color: #666;
+      color: #158b2b;
       font-size: 1em; 
       font-family: serif;
     }

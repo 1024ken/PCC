@@ -1,0 +1,36 @@
+<div class="container_contacts">
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @contact.errors.count %>件のエラーがあります。修正して再度入力してください。</h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |msg| %>
+          <%= msg =%>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 contacts"><%= form_for(@contact, url: choose_new_or_edit2) do |f| %>
+    <div class="contacts_title"><h1>〜 Contact 〜</h1></div>
+      <%= form_for(@contact) do |f| %>
+        <div class="contact_main">
+          <div class="contact_item">
+            <%= f.label :name %>
+            <%= f.text_field :name, placeholder: "名前", class: 'form_control_contact' %>
+          </div>
+        
+          <div class="contact_item">
+            <%= f.label :email %>
+            <%= f.text_field :email, placeholder: "メールアドレス", class: 'form_control_contact' %>
+          </div>
+
+          <div class="contact_item">
+            <%= f.label :content %>
+            <%= f.text_field :content, placeholder: "メッセージ", class: 'form_control_contact' %>
+          </div>
+          <%= f.submit 'send to contact', class: 'btn btn-primary btn-block contact' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

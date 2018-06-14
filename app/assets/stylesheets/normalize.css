@@ -167,11 +167,12 @@
   input,
   optgroup,
   select,
-  textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
+  textarea,
+  label {
+    font-family: serif; /* 1 */
+    font-size: 1.8rem; /* 1 */
     line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
+    margin: 0.2em; /* 2 */
   }
   
   /**
@@ -184,6 +185,9 @@
     overflow: visible;
   }
   
+  input::placeholder {
+    color: rgb(197, 248, 197);
+  }
   /**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
    * 1. Remove the inheritance of text transform in Firefox.
@@ -203,8 +207,29 @@
   [type="reset"],
   [type="submit"] {
     -webkit-appearance: button;
+    color: #666;
   }
   
+  .button,
+  [type="submit"]{
+    height: 2.6rem;
+    margin: 0.5rem 0.5rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #a6ddb0;
+    border: solid 2px #158b2b;
+    border-radius: 5px;
+    transition: .4s;
+  }
+
+  .button,
+  [type="submit"]:hover {
+    background: #a6ddb0;
+    text-decoration: none;
+    color: white;
+    opacity: 5;
+  }
   /**
    * Remove the inner border and padding in Firefox.
    */
@@ -352,4 +377,18 @@
   
   [hidden] {
     display: none;
+  }
+
+  p {
+    font-size: 2em;
+    font-family: serif;
+    color: #158b2b;
+  }
+
+  #error_explanation {
+    color: red;
+    background-color: #FFD5EC;
+    border: solid 3px red;
+    border-radius: 8px;
+    text-align: center;
   }

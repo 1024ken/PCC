@@ -1,3 +1,59 @@
 // Place all the styles related to the chat_rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container_chat_room {
+  
+  .wrapper.col-md-8.col-md-offset-2.col-sm-10.chat_room {
+    
+    .chat {
+      
+      p {
+        position: relative;
+        padding: 0.5em;
+        margin: 1.2em;
+        background: -moz-linear-gradient(to right, #53f871, rgb(219, 250, 219));
+        background: -webkit-linear-gradient(to right, #53f871, rgb(219, 250, 219));
+        background: linear-gradient(to right, #53f871, rgb(219, 250, 219));
+        box-shadow: 6px 6px 0px 0px #318c30;
+        border-radius: 20px;
+      }
+    
+      p:before {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 40.5%;
+        border: 15px solid transparent;
+        border-top: 15px solid #318c30;
+        width: 0;
+        height: 0;
+      }
+
+      p:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 40%;
+        border: 15px solid transparent;
+        border-top: 15px solid #53f871;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .chat_post {
+      
+        .chat_input {
+          margin-left: -10%;
+          font-size: 2em;
+          font-family: serif;
+          color: #158b2b;
+
+          .input::placeholder {
+            color: rgb(197, 248, 197);
+          }
+        }     
+    }
+  }
+}

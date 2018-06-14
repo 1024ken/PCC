@@ -1,14 +1,16 @@
 <div class="container_chat_room">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 chat_room">
-    <div id="chat">
+    <div class="chat">
       <% @chat_messages.each do |chat_message| %>
         <p><%= chat_message.content %></p>
       <% end %>
     </div>
 
-    <form>
-     投稿: <input type="text" />
-    <input type="submit" value="投稿" onClick="postChatMessage()" />
-    </form>
+    <div class="chat_post">
+      <form>
+        <span class="chat_input">Post message 💫 <input type="text", placeholder="メッセージ"></span>
+        <input type="submit" value="投稿" onClick="postChatMessage()">
+      </form>
+    </div>
   </div>
 </div>

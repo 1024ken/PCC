@@ -1,0 +1,22 @@
+<div class="container_contacts">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 contacts">
+    <div class="contacts_title"><h1>〜 Contact 〜</h1></div>
+    <h3>以下の内容で、送信する。</h3>
+      <%= form_for(@contact) do |f| %>
+        <%= f.hidden_field :name %>
+        <%= f.hidden_field :email %>
+        <%= f.hidden_field :content %>
+        <p>タイトル:<%= @contact.name %></p>
+        <p>本文:<%= @contact.email %></p>
+        <p>内容:<%= @contact.content %></p>
+        <%= f.submit "send",class: 'btn btn-primary btn-block'  %>
+      <% end %>
+
+   <%= form_for(@contact, url: new_contact_path, method: 'get') do |f| %>
+    <%= f.hidden_field :name %>
+    <%= f.hidden_field :email %>
+    <%= f.hidden_field :content %>
+    <%= f.submit "back to contact", name: 'back', class: 'btn btn-default btn-block' %>
+   <% end %>
+  </div>
+</div>
